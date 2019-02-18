@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alumno.proyectofinal.Borrar">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/appBarLayout">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_borrar" />
+    <EditText
+        android:id="@+id/buscaet1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="11dp"
+        android:hint="buscar"
+        android:ems="10"
+        android:layout_below="@id/appBarLayout"
+
+        android:layout_marginLeft="15dp" />
+
+    <Button
+        android:id="@+id/buscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/buscaet1"
+
+        android:text="Buscar"
+        android:onClick="buscarFuncion"/>
+
+    <ListView
+        android:id="@+id/lv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buscar"
+        android:layout_marginBottom="90dp"
+        >
+
+    </ListView>
+
+    <Button
+        android:id="@+id/borrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:onClick="borrarFuncion"
+        android:text="Borrar"
+        android:layout_above="@+id/lv1"
+        android:layout_toRightOf="@+id/buscar"
+        android:layout_toEndOf="@+id/buscar"
+        android:layout_marginLeft="29dp"
+        android:layout_marginStart="29dp" />
+</RelativeLayout>
